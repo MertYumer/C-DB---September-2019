@@ -1,0 +1,14 @@
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\bin\Debug\netcoreapp2.1\P02-VillainNames.deps.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\bin\Debug\netcoreapp2.1\P02-VillainNames.runtimeconfig.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\bin\Debug\netcoreapp2.1\P02-VillainNames.runtimeconfig.dev.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\bin\Debug\netcoreapp2.1\P02-VillainNames.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\bin\Debug\netcoreapp2.1\P02-VillainNames.pdb
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\bin\Debug\netcoreapp2.1\P01-InitialSetup.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\bin\Debug\netcoreapp2.1\P01-InitialSetup.pdb
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\obj\Debug\netcoreapp2.1\P02-VillainNames.csprojAssemblyReference.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\obj\Debug\netcoreapp2.1\P02-VillainNames.csproj.CoreCompileInputs.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\obj\Debug\netcoreapp2.1\P02-VillainNames.AssemblyInfoInputs.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\obj\Debug\netcoreapp2.1\P02-VillainNames.AssemblyInfo.cs
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\obj\Debug\netcoreapp2.1\P02-VillainNames.csproj.CopyComplete
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\obj\Debug\netcoreapp2.1\P02-VillainNames.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. DB Apps - Exercises\P02-VillainNames\obj\Debug\netcoreapp2.1\P02-VillainNames.pdb
