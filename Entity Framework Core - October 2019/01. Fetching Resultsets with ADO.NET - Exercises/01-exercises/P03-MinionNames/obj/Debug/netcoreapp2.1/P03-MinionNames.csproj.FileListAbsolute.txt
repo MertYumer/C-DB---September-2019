@@ -1,0 +1,14 @@
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\bin\Debug\netcoreapp2.1\P03-MinionNames.deps.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\bin\Debug\netcoreapp2.1\P03-MinionNames.runtimeconfig.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\bin\Debug\netcoreapp2.1\P03-MinionNames.runtimeconfig.dev.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\bin\Debug\netcoreapp2.1\P03-MinionNames.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\bin\Debug\netcoreapp2.1\P03-MinionNames.pdb
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\bin\Debug\netcoreapp2.1\P01-InitialSetup.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\bin\Debug\netcoreapp2.1\P01-InitialSetup.pdb
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\obj\Debug\netcoreapp2.1\P03-MinionNames.csprojAssemblyReference.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\obj\Debug\netcoreapp2.1\P03-MinionNames.csproj.CoreCompileInputs.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\obj\Debug\netcoreapp2.1\P03-MinionNames.AssemblyInfoInputs.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\obj\Debug\netcoreapp2.1\P03-MinionNames.AssemblyInfo.cs
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\obj\Debug\netcoreapp2.1\P03-MinionNames.csproj.CopyComplete
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\obj\Debug\netcoreapp2.1\P03-MinionNames.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\01. Fetching Resultsets with ADO.NET - Exercises\01-exercises\P03-MinionNames\obj\Debug\netcoreapp2.1\P03-MinionNames.pdb
