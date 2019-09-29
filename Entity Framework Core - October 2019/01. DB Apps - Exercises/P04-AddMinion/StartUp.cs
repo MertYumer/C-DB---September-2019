@@ -67,9 +67,9 @@
             {
                 command.Parameters.AddWithValue("@townName", townName);
 
-                int rowsAffected = (int)command.ExecuteNonQuery();
+                int affectedRows = (int)command.ExecuteNonQuery();
 
-                if (rowsAffected > 0)
+                if (affectedRows > 0)
                 {
                     Console.WriteLine($"Town {townName} was added to the database.");
                 }
@@ -104,9 +104,9 @@
             {
                 command.Parameters.AddWithValue("@villainName", villainName);
 
-                int rowsAffected = (int)command.ExecuteNonQuery();
+                int affectedRows = (int)command.ExecuteNonQuery();
 
-                if (rowsAffected > 0)
+                if (affectedRows > 0)
                 {
                     Console.WriteLine($"Villain {villainName} was added to the database.");
                 }
@@ -158,11 +158,11 @@
                 command.Parameters.AddWithValue("@minionId", minionId);
                 command.Parameters.AddWithValue("@villainId", villainId);
 
-                int rowsAffected = 0;
+                int affectedRows = 0;
 
                 try
                 {
-                    rowsAffected = (int)command.ExecuteNonQuery();
+                    affectedRows = (int)command.ExecuteNonQuery();
                 }
 
                 catch (Exception)
@@ -170,7 +170,7 @@
                     Console.WriteLine($"{minionName} is already a slave of {villainName}");
                 }
 
-                if (rowsAffected > 0)
+                if (affectedRows > 0)
                 {
                     Console.WriteLine($"Successfully added {minionName} to be minion of {villainName}.");
                 }
