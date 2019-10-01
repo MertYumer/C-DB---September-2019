@@ -1,10 +1,10 @@
 SELECT TOP 5
-		   c.CountryName,
-	       r.RiverName
+	   c.CountryName,
+	   r.RiverName
       FROM Countries c
-LEFT JOIN CountriesRivers cr
-		ON cr.CountryCode = c.CountryCode
-LEFT JOIN Rivers r
+ LEFT JOIN CountriesRivers cr
+	ON cr.CountryCode = c.CountryCode
+ LEFT JOIN Rivers r
         ON r.Id = cr.RiverId
-	 WHERE c.ContinentCode = 'AF'
+     WHERE c.ContinentCode = 'AF'
   ORDER BY c.CountryName

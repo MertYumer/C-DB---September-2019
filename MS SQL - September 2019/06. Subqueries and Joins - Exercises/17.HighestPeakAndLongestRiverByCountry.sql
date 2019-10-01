@@ -13,5 +13,5 @@ SELECT TOP 5
         ON r.Id = cr.RiverId
   GROUP BY c.CountryName
   ORDER BY [HighestPeakElevation] DESC, 
-		   [LongestRiverLength] DESC,
-		   c.CountryName
+	   [LongestRiverLength] DESC,
+	   c.CountryName

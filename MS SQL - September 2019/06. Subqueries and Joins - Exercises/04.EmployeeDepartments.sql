@@ -1,6 +1,6 @@
 SELECT TOP 5
            e.EmployeeID,
-		   e.FirstName,
+	   e.FirstName,
            e.Salary,
            d.Name AS [DepartmentName]
       FROM Employees e

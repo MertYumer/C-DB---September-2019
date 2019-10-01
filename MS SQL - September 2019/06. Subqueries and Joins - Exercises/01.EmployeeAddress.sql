@@ -1,5 +1,5 @@
 SELECT TOP 5
-           e.EmployeeID,
+       	   e.EmployeeID,
            e.JobTitle,
            a.AddressID,
            a.AddressText

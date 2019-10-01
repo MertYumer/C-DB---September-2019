@@ -6,5 +6,5 @@ SELECT TOP 3
         ON ep.EmployeeID = e.EmployeeID
  LEFT JOIN Projects p
         ON p.ProjectID = ep.ProjectID
-	 WHERE p.ProjectID IS NULL
+     WHERE p.ProjectID IS NULL
   ORDER BY e.EmployeeID
