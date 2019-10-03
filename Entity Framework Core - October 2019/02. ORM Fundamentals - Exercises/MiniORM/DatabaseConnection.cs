@@ -6,10 +6,6 @@
 	using System.Data.SqlClient;
 	using System.Linq;
 
-	/// <summary>
-	/// Used for accessing a database, inserting/updating/deleting entities
-	/// and mapping database columns to entity classes.
-	/// </summary>
 	internal class DatabaseConnection
 	{
 		private readonly SqlConnection connection;

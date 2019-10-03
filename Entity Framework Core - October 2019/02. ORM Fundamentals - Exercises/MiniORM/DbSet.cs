@@ -1,82 +1,86 @@
 ﻿namespace MiniORM
 {
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
+	using System;
+	using System.Collections;
+	using System.Collections.Generic;
+	using System.Linq;
 
-    public class DbSet<TEntity> : ICollection<TEntity>
-        where TEntity : class, new()
-    {
-        internal DbSet(IEnumerable<TEntity> entities)
-        {
-            this.Entities = new List<TEntity>();
-            this.ChangeTracker = new ChangeTracker<TEntity>(entities);
-        }
+	public class DbSet<TEntity> : ICollection<TEntity>
+		where TEntity : class, new()
+	{
+		internal DbSet(IEnumerable<TEntity> entities)
+		{
+			this.Entities = entities.ToList();
 
-        internal ChangeTracker<TEntity> ChangeTracker { get; set; }
+			this.ChangeTracker = new ChangeTracker<TEntity>(entities);
+		}
 
-        internal IList<TEntity> Entities { get; set; }
+		internal ChangeTracker<TEntity> ChangeTracker { get; set; }
 
-        public int Count => this.Entities.Count;
+		internal IList<TEntity> Entities { get; set; }
 
-        public bool IsReadOnly => this.Entities.IsReadOnly;
+		public void Add(TEntity item)
+		{
+			if (item == null)
+			{
+				throw new ArgumentNullException(nameof(item), "Item cannot be null!");
+			}
 
-        public void Add(TEntity item)
-        {
-            if (item == null)
-            {
-                throw new ArgumentNullException(nameof(item), "Item cannot be null!");
-            }
+			this.Entities.Add(item);
 
-            this.Entities.Add(item);
-            this.ChangeTracker.Add(item);
-        }
+			this.ChangeTracker.Add(item);
+		}
 
-        public bool Remove(TEntity item)
-        {
-            if (item == null)
-            {
-                throw new ArgumentNullException(nameof(item), "Item cannot be null!");
-            }
+		public void Clear()
+		{
+			while (this.Entities.Any())
+			{
+				var entity = this.Entities.First();
+				this.Remove(entity);
+			}
+		}
 
-            bool isRemoved = this.Entities.Remove(item);
+		public bool Contains(TEntity item) => this.Entities.Contains(item);
 
-            if (isRemoved)
-            {
-                this.ChangeTracker.Remove(item);
-            }
+		public void CopyTo(TEntity[] array, int arrayIndex) => this.Entities.CopyTo(array, arrayIndex);
 
-            return isRemoved;
-        }
+		public int Count => this.Entities.Count;
 
-        public void RemoveRange(IEnumerable<TEntity> entities)
-        {
-            foreach (var entity in entities)
-            {
-                this.Remove(entity);
-            }
-        }
+		public bool IsReadOnly => this.Entities.IsReadOnly;
 
-        public void Clear()
-        {
-            while (this.Entities.Any())
-            {
-                var entity = this.Entities.First();
-                this.Remove(entity);
-            }
-        }
+		public bool Remove(TEntity item)
+		{
+			if (item == null)
+			{
+				throw new ArgumentNullException(nameof(item), "item cannot be null!");
+			}
 
-        public bool Contains(TEntity item)
-            => this.Entities.Contains(item);
+			var removedSuccessfully = this.Entities.Remove(item);
 
-        public void CopyTo(TEntity[] array, int arrayIndex)
-            => this.Entities.CopyTo(array, arrayIndex);
+			if (removedSuccessfully)
+			{
+				this.ChangeTracker.Remove(item);
+			}
 
-        public IEnumerator<TEntity> GetEnumerator()
-            => this.Entities.GetEnumerator();
+			return removedSuccessfully;
+		}
 
-        IEnumerator IEnumerable.GetEnumerator()
-            => this.GetEnumerator();
-    }
+		public IEnumerator<TEntity> GetEnumerator()
+		{
+			return this.Entities.GetEnumerator();
+		}
+
+		IEnumerator IEnumerable.GetEnumerator()
+		{
+			return this.GetEnumerator();
+		}
+
+		public void RemoveRange(IEnumerable<TEntity> entities)
+		{
+			foreach (var entity in entities.ToArray())
+			{
+				this.Remove(entity);
+			}
+		}
+	}
 }

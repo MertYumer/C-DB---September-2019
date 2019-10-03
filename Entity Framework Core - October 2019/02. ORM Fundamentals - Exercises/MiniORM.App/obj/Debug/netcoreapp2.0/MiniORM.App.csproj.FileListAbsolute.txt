@@ -1,0 +1,14 @@
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\bin\Debug\netcoreapp2.0\MiniORM.App.deps.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\bin\Debug\netcoreapp2.0\MiniORM.App.runtimeconfig.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\bin\Debug\netcoreapp2.0\MiniORM.App.runtimeconfig.dev.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\bin\Debug\netcoreapp2.0\MiniORM.App.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\bin\Debug\netcoreapp2.0\MiniORM.App.pdb
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\bin\Debug\netcoreapp2.0\MiniORM.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\bin\Debug\netcoreapp2.0\MiniORM.pdb
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\obj\Debug\netcoreapp2.0\MiniORM.App.csprojAssemblyReference.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\obj\Debug\netcoreapp2.0\MiniORM.App.csproj.CoreCompileInputs.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\obj\Debug\netcoreapp2.0\MiniORM.App.AssemblyInfoInputs.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\obj\Debug\netcoreapp2.0\MiniORM.App.AssemblyInfo.cs
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\obj\Debug\netcoreapp2.0\MiniORM.App.csproj.CopyComplete
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\obj\Debug\netcoreapp2.0\MiniORM.App.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\02. ORM Fundamentals - Exercises\MiniORM.App\obj\Debug\netcoreapp2.0\MiniORM.App.pdb
