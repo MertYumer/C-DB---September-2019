@@ -1,5 +1,5 @@
-	CREATE PROC usp_CalculateFutureValueForAccount (@AccountId INT, @YearlyInterestRate FLOAT)
-		AS
+    CREATE PROC usp_CalculateFutureValueForAccount (@AccountId INT, @YearlyInterestRate FLOAT)
+	AS
     SELECT a.Id AS [Account Id],
            ah.FirstName AS [First Name],
            ah.LastName AS [Last Name],

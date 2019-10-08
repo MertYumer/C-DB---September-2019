@@ -1,5 +1,5 @@
-	CREATE PROC usp_GetEmployeesFromTown (@TownName VARCHAR(10))
-		AS
+    CREATE PROC usp_GetEmployeesFromTown (@TownName VARCHAR(10))
+	AS
     SELECT e.FirstName,
            e.LastName
       FROM Employees e

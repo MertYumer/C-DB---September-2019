@@ -1,5 +1,5 @@
 CREATE PROC usp_EmployeesBySalaryLevel (@SalaryLevel NVARCHAR(50))
-	AS
+    AS
  BEGIN
        SELECT e.FirstName,
               e.LastName
