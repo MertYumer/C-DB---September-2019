@@ -1,0 +1,10 @@
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\bin\Debug\netcoreapp2.1\P06-AddingAndUpdating.deps.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\bin\Debug\netcoreapp2.1\P06-AddingAndUpdating.runtimeconfig.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\bin\Debug\netcoreapp2.1\P06-AddingAndUpdating.runtimeconfig.dev.json
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\bin\Debug\netcoreapp2.1\P06-AddingAndUpdating.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\obj\Debug\netcoreapp2.1\P06-AddingAndUpdating.csproj.CoreCompileInputs.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\obj\Debug\netcoreapp2.1\P06-AddingAndUpdating.AssemblyInfoInputs.cache
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\obj\Debug\netcoreapp2.1\P06-AddingAndUpdating.AssemblyInfo.cs
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\bin\Debug\netcoreapp2.1\P06-AddingAndUpdating.pdb
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\obj\Debug\netcoreapp2.1\P06-AddingAndUpdating.dll
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P06-AddingAndUpdating\obj\Debug\netcoreapp2.1\P06-AddingAndUpdating.pdb
