@@ -8,3 +8,4 @@ D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. Enti
 D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P05-EmployeesFrom\obj\Debug\netcoreapp2.1\P05-EmployeesFromResearchAndDevelopment.AssemblyInfo.cs
 D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P05-EmployeesFrom\obj\Debug\netcoreapp2.1\P05-EmployeesFromResearchAndDevelopment.dll
 D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P05-EmployeesFrom\obj\Debug\netcoreapp2.1\P05-EmployeesFromResearchAndDevelopment.pdb
+D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\03. EntityFramework Introduction - Exercises\P05-EmployeesFrom\obj\Debug\netcoreapp2.1\P05-EmployeesFromResearchAndDevelopment.csprojAssemblyReference.cache

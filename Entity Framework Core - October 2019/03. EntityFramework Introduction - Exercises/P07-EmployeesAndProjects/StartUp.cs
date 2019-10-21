@@ -1,7 +1,6 @@
 ﻿namespace SoftUni
 {
     using SoftUni.Data;
-    using SoftUni.Models;
     using System;
     using System.Globalization;
     using System.Linq;
@@ -24,7 +23,8 @@
 
             var employees = context.Employees
                 .Where(e => e.EmployeesProjects
-                    .Any(p => p.Project.StartDate.Year >= 2001 && p.Project.StartDate.Year <= 2003))
+                    .Any(p => p.Project.StartDate.Year >= 2001 
+                    && p.Project.StartDate.Year <= 2003))
                 .Take(10)
                 .Select(e => new
                 {
