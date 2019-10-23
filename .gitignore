@@ -6,7 +6,6 @@
 *.cache
 *.targets
 *.props
-*.cs
 *.txt
 Entity Framework Core - October 2019/03. EntityFramework Introduction - Exercises/.vs/SoftUni/v16/.suo
 Entity Framework Core - October 2019/04. Code-First - Exercises/.vs/04. Code-First - Exercises/v16/.suo
