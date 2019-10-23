@@ -1,0 +1,25 @@
+
+*.lock
+*.json
+*.dll
+*.pdb
+*.cache
+*.targets
+*.props
+*.cs
+*.txt
+Entity Framework Core - October 2019/03. EntityFramework Introduction - Exercises/.vs/SoftUni/v16/.suo
+Entity Framework Core - October 2019/04. Code-First - Exercises/.vs/04. Code-First - Exercises/v16/.suo
+Entity Framework Core - October 2019/03. EntityFramework Introduction - Exercises/.vs/SoftUni/DesignTimeBuild/.dtbcache
+*.ide
+Entity Framework Core - October 2019/03. EntityFramework Introduction - Exercises/.vs/SoftUni/DesignTimeBuild/.dtbcache
+Entity Framework Core - October 2019/03. EntityFramework Introduction - Exercises/.vs/SoftUni/DesignTimeBuild/.dtbcache
+Entity Framework Core - October 2019/04. Code-First - Exercises/.vs/04. Code-First - Exercises/DesignTimeBuild/.dtbcache
+Entity Framework Core - October 2019/03. EntityFramework Introduction - Exercises/.vs/SoftUni/DesignTimeBuild/.dtbcache
+*.exe
+*.CopyComplete
+*.exe
+Entity Framework Core - October 2019/04. Code-First - Exercises/P01-HospitalDatabase/bin/Debug/netcoreapp3.0/P01-HospitalDatabase.exe
+*.exe
+Entity Framework Core - October 2019/04. Code-First - Exercises/P01-HospitalDatabase/bin/Debug/netcoreapp3.0/P01-HospitalDatabase.exe
+*.exe

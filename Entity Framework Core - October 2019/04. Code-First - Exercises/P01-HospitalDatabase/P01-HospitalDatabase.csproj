@@ -7,7 +7,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20191023102017_AddedDoctorEntity.cs" />
+    <Compile Remove="Migrations\20191023102017_AddedDoctorEntity.Designer.cs" />
+    <Compile Remove="Migrations\20191023102330_AddedDoctorEntity.cs" />
+    <Compile Remove="Migrations\20191023102330_AddedDoctorEntity.Designer.cs" />
+    <Compile Remove="Migrations\20191023104119_AddedDoctorEntity.cs" />
+    <Compile Remove="Migrations\20191023104119_AddedDoctorEntity.Designer.cs" />
+    <Compile Remove="Migrations\20191023104418_AddedDoctorEntity.cs" />
+    <Compile Remove="Migrations\20191023104418_AddedDoctorEntity.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\P02-HospitalDatabaseModification\P02-HospitalDatabaseModification.csproj" />
   </ItemGroup>
 
 </Project>
