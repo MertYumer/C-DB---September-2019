@@ -9,6 +9,8 @@
     using Models;
     using Newtonsoft.Json;
     using AutoMapper;
+    using Microsoft.EntityFrameworkCore;
+    using Newtonsoft.Json.Serialization;
 
     public class StartUp
     {
@@ -24,7 +26,7 @@
 
             using (var context = new CarDealerContext())
             {
-                var result = GetCarsFromMakeToyota(context);
+                var result = GetSalesWithAppliedDiscount(context);
                 Console.WriteLine(result);
             }
         }
@@ -157,7 +159,7 @@
                 .ThenBy(c => c.IsYoungDriver)
                 .ToList();
 
-            var customerDtos = Mapper.Map<IEnumerable<Customer>, 
+            var customerDtos = Mapper.Map<IEnumerable<Customer>,
                 IEnumerable<CustomerDto>>(customers);
 
             var jsonResult = JsonConvert.SerializeObject(customerDtos, Formatting.Indented);
@@ -184,8 +186,112 @@
         }
 
         //Problem 16 - Export Local Suppliers
+        public static string GetLocalSuppliers(CarDealerContext context)
+        {
+            var suppliers = context
+                .Suppliers
+                .Where(s => !s.IsImporter)
+                .ToList();
+
+            var supplierDtos = Mapper.Map<IEnumerable<Supplier>,
+                IEnumerable<SupplierDto>>(suppliers);
+
+            DefaultContractResolver contractResolver = new DefaultContractResolver()
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var jsonResult = JsonConvert.SerializeObject(supplierDtos, new JsonSerializerSettings()
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            });
+
+            return jsonResult;
+        }
+
         //Problem 17 - Export Cars With Their List Of Parts
+        public static string GetCarsWithTheirListOfParts(CarDealerContext context)
+        {
+            var carsWithParts = context
+                .Cars
+                .Select(x => new
+                {
+                    car = new
+                    {
+                        x.Make,
+                        x.Model,
+                        x.TravelledDistance
+                    },
+
+                    parts = x.PartCars
+                    .Select(pc => new
+                    {
+                        pc.Part.Name,
+                        Price = $"{pc.Part.Price:F2}"
+                    })
+                })
+                .ToList();
+
+            string jsonOutput = JsonConvert.SerializeObject(carsWithParts, Formatting.Indented);
+
+            return jsonOutput;
+        }
+
         //Problem 18 - Export Total Sales By Customer
+        public static string GetTotalSalesByCustomer(CarDealerContext context)
+        {
+            var customersWithSales = context
+                .Customers
+                .Where(c => c.Sales.Count > 0)
+                .Select(c => new CustomerWithSalesDto()
+                {
+                    FullName = c.Name,
+                    BoughtCars = c.Sales.Count,
+                    SpentMoney = c.Sales.Sum(s => s.Car.PartCars.Sum(pc => pc.Part.Price))
+                })
+                .ToList();
+
+            DefaultContractResolver contractResolver = new DefaultContractResolver()
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var jsonResult = JsonConvert.SerializeObject(customersWithSales, new JsonSerializerSettings()
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            });
+
+            return jsonResult;
+        }
+
         //Problem 19 - Export Sales With Applied Discount
+        public static string GetSalesWithAppliedDiscount(CarDealerContext context)
+        {
+            var sales = context
+                .Sales
+                .Select(s => new
+                {
+                    car = new
+                    {
+                        s.Car.Make,
+                        s.Car.Model,
+                        s.Car.TravelledDistance
+                    },
+
+                    customerName = s.Customer.Name,
+                    Discount = $"{s.Discount:f2}",
+                    price = $"{s.Car.PartCars.Sum(pc => pc.Part.Price):f2}",
+                    priceWithDiscount =
+                    $"{s.Car.PartCars.Sum(pc => pc.Part.Price) - s.Car.PartCars.Sum(pc => pc.Part.Price) * (s.Discount / 100m):f2}"
+                })
+                .Take(10)
+                .ToList();
+
+            var jsonResult = JsonConvert.SerializeObject(sales, Formatting.Indented);
+
+            return jsonResult;
+        }
     }
 }

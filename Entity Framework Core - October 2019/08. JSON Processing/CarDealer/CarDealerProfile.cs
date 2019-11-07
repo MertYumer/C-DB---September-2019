@@ -15,6 +15,10 @@
                 .ForMember(x => x.BirthDate, y => y.MapFrom(c => c.BirthDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)));
 
             CreateMap<Car, CarExportDto>();
+
+            CreateMap<Supplier, SupplierDto>();
+
+            CreateMap<Customer, CustomerWithSalesDto>();
         }
     }
 }

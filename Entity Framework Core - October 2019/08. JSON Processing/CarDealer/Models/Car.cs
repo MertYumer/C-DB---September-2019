@@ -6,8 +6,8 @@
     {
         public Car()
         {
-            this.Sales = new HashSet<Sale>();
-            this.PartCars = new HashSet<PartCar>();
+            this.Sales = new List<Sale>();
+            this.PartCars = new List<PartCar>();
         }
 
         public int Id { get; set; }
@@ -20,6 +20,6 @@
 
         public ICollection<Sale> Sales { get; set; }
 
-        public ICollection<PartCar> PartCars { get; set; } = new List<PartCar>();
+        public ICollection<PartCar> PartCars { get; set; }
     }
 }
