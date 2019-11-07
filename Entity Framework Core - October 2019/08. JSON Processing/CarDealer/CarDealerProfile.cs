@@ -1,16 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AutoMapper;
-using CarDealer.Models;
-
-namespace CarDealer
+﻿namespace CarDealer
 {
+    using AutoMapper;
+    using DTO;
+    using Models;
+    using System.Globalization;
+
     public class CarDealerProfile : Profile
     {
         public CarDealerProfile()
         {
-        
+            CreateMap<CarImportDto, Car>();
+
+            CreateMap<Customer, CustomerDto>()
+                .ForMember(x => x.BirthDate, y => y.MapFrom(c => c.BirthDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)));
+
+            CreateMap<Car, CarExportDto>();
         }
     }
 }

@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CarDealer.Models
+﻿namespace CarDealer.Models
 {
+    using System.Collections.Generic;
+
     public class Supplier
     {
+        public Supplier()
+        {
+            this.Parts = new HashSet<Part>();
+        }
+
         public int Id { get; set; }
 
         public string Name { get; set; }

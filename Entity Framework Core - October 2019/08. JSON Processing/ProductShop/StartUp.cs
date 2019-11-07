@@ -24,9 +24,9 @@
 
             Mapper.Initialize(cfg => cfg.AddProfile<ProductShopProfile>());
 
-            var context = new ProductShopContext();
+            using (var context = new ProductShopContext())
             {
-                var result = GetSoldProducts(context);
+                var result = GetUsersWithProducts(context);
                 Console.WriteLine(result);
             }
         }
@@ -56,8 +56,8 @@
         {
             var categories = JsonConvert.DeserializeObject<Category[]>(inputJson);
             var validCategories = categories
-                .Where(x => x.Name != null 
-                && x.Name.Length >= 3 
+                .Where(x => x.Name != null
+                && x.Name.Length >= 3
                 && x.Name.Length <= 13)
                 .ToArray();
 
@@ -104,19 +104,19 @@
         {
             var usersWithSales = context
                 .Users
-                .Where(u => u.ProductsSold.Count > 0 
+                .Where(u => u.ProductsSold.Count > 0
                 && u.ProductsSold.Any(ps => ps.Buyer != null))
                 .OrderBy(u => u.LastName)
                 .ThenBy(u => u.FirstName)
                 .Include(u => u.ProductsSold)
                 .ToList();
 
-            var jsonExport = Mapper.Map<IEnumerable<User>, 
+            var jsonExport = Mapper.Map<IEnumerable<User>,
                 IEnumerable<UserWithSalesDto>>(usersWithSales);
 
-            DefaultContractResolver contractResolver = new DefaultContractResolver() 
-            { 
-                NamingStrategy = new CamelCaseNamingStrategy() 
+            DefaultContractResolver contractResolver = new DefaultContractResolver()
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
             };
 
             var jsonResult = JsonConvert.SerializeObject(jsonExport, new JsonSerializerSettings()
@@ -129,6 +129,82 @@
         }
 
         //Problem 7 - Query 7. Export Categories By Products Count
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
+        {
+            var categories = context
+                .Categories
+                .OrderByDescending(c => c.CategoryProducts.Count)
+                .Select(c => new
+                {
+                    Category = c.Name,
+                    ProductsCount = c.CategoryProducts.Count,
+                    AveragePrice = $"{c.CategoryProducts.Average(cp => cp.Product.Price):f2}",
+                    TotalRevenue = $"{c.CategoryProducts.Sum(cp => cp.Product.Price):f2}"
+                });
+
+            DefaultContractResolver contractResolver = new DefaultContractResolver()
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var jsonResult = JsonConvert.SerializeObject(categories, new JsonSerializerSettings()
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            });
+
+            return jsonResult;
+        }
+
         //Problem 8 - Query 8. Export Users and Products
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var users = context
+                .Users
+                .Where(u => u.ProductsSold.Any(p => p.Buyer != null))
+                .OrderByDescending(u => u.ProductsSold.Count(p => p.Buyer != null))
+                .Select(u => new
+                {
+                    u.FirstName,
+                    u.LastName,
+                    u.Age,
+
+                    soldProducts = new
+                    {
+                        Count = u.ProductsSold
+                        .Count(p => p.Buyer != null),
+
+                        Products = u.ProductsSold
+                        .Where(p => p.Buyer != null)
+                        .Select(p => new
+                        {
+                            p.Name,
+                            p.Price
+                        })
+                    }
+                })
+                .ToList();
+
+            var resultUsers = new
+            {
+                UsersCount = users.Count,
+                Users = users
+            };
+
+
+            DefaultContractResolver contractResolver = new DefaultContractResolver()
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var jsonResult = JsonConvert.SerializeObject(resultUsers, new JsonSerializerSettings()
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+
+            return jsonResult;
+        }
     }
 }

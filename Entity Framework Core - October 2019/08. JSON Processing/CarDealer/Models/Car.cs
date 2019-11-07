@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-
-namespace CarDealer.Models
+﻿namespace CarDealer.Models
 {
+    using System.Collections.Generic;
+
     public class Car
     {
+        public Car()
+        {
+            this.Sales = new HashSet<Sale>();
+            this.PartCars = new HashSet<PartCar>();
+        }
+
         public int Id { get; set; }
 
         public string Make { get; set; }
