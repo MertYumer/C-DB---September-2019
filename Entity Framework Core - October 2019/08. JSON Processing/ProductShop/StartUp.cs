@@ -26,7 +26,7 @@
 
             using (var context = new ProductShopContext())
             {
-                var result = GetUsersWithProducts(context);
+                var result = ImportCategoryProducts(context, jsonCategoryProducts);
                 Console.WriteLine(result);
             }
         }
@@ -71,14 +71,7 @@
         public static string ImportCategoryProducts(ProductShopContext context, string inputJson)
         {
             var categoriesProducts = JsonConvert.DeserializeObject<CategoryProduct[]>(inputJson);
-            var categoriesIds = context.Categories.Select(c => c.Id).ToList();
-            var productsIds = context.Products.Select(p => p.Id).ToList();
-
-            var validCategoriesProducts = categoriesProducts
-                .Where(cp => categoriesIds.Contains(cp.CategoryId)
-                 && productsIds.Contains(cp.ProductId));
-
-            context.CategoryProducts.AddRange(validCategoriesProducts);
+            context.CategoryProducts.AddRange(categoriesProducts);
             var count = context.SaveChanges();
 
             return $"Successfully imported {count}";
