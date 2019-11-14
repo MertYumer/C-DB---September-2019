@@ -29,7 +29,7 @@
 
             using (var context = new CarDealerContext())
             {
-                var result = GetSalesWithAppliedDiscount(context);
+                var result = GetLocalSuppliers(context);
                 Console.WriteLine(result);
             }
         }

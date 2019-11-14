@@ -26,8 +26,8 @@
         {
             var viewOrder = new CreateOrderViewModel
             {
-                Items = this.context.Items.Select(x => x.Id).ToList(),
-                Employees = this.context.Employees.Select(x => x.Id).ToList(),
+                Items = this.context.Items.Select(x => x.Name).ToList(),
+                Employees = this.context.Employees.Select(x => x.Name).ToList(),
             };
 
             return this.View(viewOrder);
@@ -46,9 +46,14 @@
             order.DateTime = DateTime.Now;
             order.Type = Enum.Parse<OrderType>(model.Type);
 
+            var item = context.Items.FirstOrDefault(i => i.Name == model.ItemName);
+            var employee = context.Employees.FirstOrDefault(e => e.Name == model.EmployeeName);
+
+            order.Employee = employee;
+
             order.OrderItems.Add(new OrderItem
             {
-                ItemId = model.ItemId,
+                ItemId = item.Id,
                 Order = order,
                 Quantity = model.Quantity
             });

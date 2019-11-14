@@ -63,7 +63,7 @@ using FastFood.Web;
             WriteLiteral("<h1 class=\"text-center\">Register Employee</h1>\r\n<hr class=\"bg-secondary half-width\" />\r\n");
             EndContext();
             BeginContext(218, 1193, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb0c7eaa862745e5a36e7c75bd5f6470", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "544e1da2628a4205a7d10c96ae451e4a", async() => {
                 BeginContext(314, 525, true);
                 WriteLiteral(@"
     <div class=""form-group"">
@@ -89,7 +89,7 @@ using FastFood.Web;
                 WriteLiteral("            ");
                 EndContext();
                 BeginContext(912, 70, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a5d5ac24da9a4c2aa05f9cdfbb0c9750", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3abb1af863a24e58b4e65e8e548f6f51", async() => {
                     BeginContext(952, 21, false);
 #line 22 "D:\Projects\C# DB - September 2019\Entity Framework Core - October 2019\07. C# Auto Mapping Objects\FastFood.Web\Views\Employees\Register.cshtml"
                                               Write(position.PositionName);

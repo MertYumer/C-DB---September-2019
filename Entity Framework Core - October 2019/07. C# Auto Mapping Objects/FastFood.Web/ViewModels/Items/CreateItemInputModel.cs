@@ -11,6 +11,6 @@
         [Range(typeof(decimal), "0.50", "100.00")]
         public decimal Price { get; set; }
 
-        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
     }
 }

@@ -20,9 +20,6 @@
 
             CreateMap<SaleDto, Sale>();
 
-            CreateMap<Supplier, LocalSupplierDto>()
-                .ForMember(dest => dest.PartsCount, opt => opt.MapFrom(src => src.Parts.Count));
-
             CreateMap<Customer, CustomerWithSpentMoneyDto>()
                 .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.Name))
                 .ForMember(dest => dest.BoughtCars, opt => opt.MapFrom(src => src.Sales.Count))
