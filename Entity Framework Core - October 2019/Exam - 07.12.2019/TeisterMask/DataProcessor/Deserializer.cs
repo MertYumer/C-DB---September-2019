@@ -50,15 +50,21 @@
                     OpenDate = DateTime.ParseExact(projectDto.OpenDate, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                     DueDate = string.IsNullOrEmpty(projectDto.DueDate)
                     ? (DateTime?)null
-                    : DateTime.ParseExact(projectDto.DueDate, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    : DateTime.ParseExact(projectDto.DueDate, "dd/MM/yyyy", CultureInfo.InvariantCulture)
                 };
 
                 foreach (var taskDto in projectDto.Tasks)
                 {
+                    if (!IsValid(taskDto))
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
                     var taskOpenDate = DateTime.ParseExact(taskDto.OpenDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                     var taskDueDate = DateTime.ParseExact(taskDto.DueDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
-                    if (!IsValid(taskDto) || taskOpenDate < project.OpenDate || taskDueDate > project.DueDate)
+                    if (taskOpenDate < project.OpenDate || taskDueDate > project.DueDate)
                     {
                         sb.AppendLine(ErrorMessage);
                         continue;
